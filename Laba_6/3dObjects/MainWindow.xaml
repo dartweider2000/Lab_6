@@ -1,0 +1,112 @@
+﻿<Window x:Class="_3dObjects.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_3dObjects"
+        mc:Ignorable="d"
+        Title="Трехмерные объекты" Height="550" Width="800" MinHeight="550" MinWidth="800">
+    <Grid>
+        <DockPanel LastChildFill="True">
+            <TabControl DockPanel.Dock="Top" SelectionChanged="TabControl_SelectionChanged">
+                <TabItem Header="Базовое тело">
+                    <StackPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="400"/>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition Width="210"/>
+                                <ColumnDefinition Width="55"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0" Orientation="Horizontal">
+                                <RadioButton Checked="RadioButton_Checked_Type3dObject" GroupName="Type3dObject" Margin="5" VerticalAlignment="Center" IsChecked="True">Окружность</RadioButton>
+                                <RadioButton Checked="RadioButton_Checked_Type3dObject" GroupName="Type3dObject" Margin="5" VerticalAlignment="Center">Дуга параболы</RadioButton>
+                                <RadioButton Checked="RadioButton_Checked_Type3dObject" GroupName="Type3dObject" Margin="5" VerticalAlignment="Center">Логарифмическая спираль</RadioButton>
+                            </StackPanel>
+                            <CheckBox Unchecked="CheckBox_Touch" Checked="CheckBox_Touch" Grid.Column="2" Margin="5" VerticalAlignment="Center">Фронтально-проецирующий</CheckBox>
+                            <ComboBox SelectionChanged="ComboBox_SelectionChanged" Grid.Column="3" Margin="5" VerticalAlignment="Center">
+                                <ComboBoxItem>
+                                    <TextBlock>3</TextBlock>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <TextBlock>4</TextBlock>
+                                </ComboBoxItem>
+                                <ComboBoxItem IsSelected="True">
+                                    <TextBlock>8</TextBlock>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <TextBlock>16</TextBlock>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <TextBlock>24</TextBlock>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <TextBlock>32</TextBlock>
+                                </ComboBoxItem>
+                            </ComboBox>
+                        </Grid>
+                    </StackPanel>
+                </TabItem>
+                <TabItem Header="Аксонометрия" IsSelected="True">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="80"/>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="131"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="5" VerticalAlignment="Center">Вид проекции</TextBlock>
+                        <ComboBox SelectionChanged="ComboBox_SelectionChanged_View"  Grid.Column="1" Margin="10 5 0 5" VerticalAlignment="Center">
+                            <ComboBoxItem >
+                                <TextBlock>Прямоугольная изометрия</TextBlock>
+                            </ComboBoxItem>
+                            <ComboBoxItem IsSelected="True">
+                                <TextBlock>Прямоугольная диметрия</TextBlock>
+                            </ComboBoxItem>
+                            <ComboBoxItem>
+                                <TextBlock>Фронтальная изометрия</TextBlock>
+                            </ComboBoxItem>
+                            <ComboBoxItem>
+                                <TextBlock>Фронтальная диметрия</TextBlock>
+                            </ComboBoxItem>
+                            <ComboBoxItem>
+                                <TextBlock>Горизонтальная изометрия</TextBlock>
+                            </ComboBoxItem>
+                        </ComboBox>
+                        <CheckBox Grid.Column="3" Margin="5" VerticalAlignment="Center" Unchecked="CheckBox_Back" Checked="CheckBox_Back">Обратная сторона</CheckBox>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Перспектива">
+                    <Grid Height="32">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Margin="5" Grid.Column="0" VerticalAlignment="Center">Высота</TextBlock>
+                        <Slider ValueChanged="Slider_ValueChanged_Y" Margin="5" Grid.Column="1" Value="0" Minimum="-15" Maximum="60" SelectionStart="0" VerticalAlignment="Center"></Slider>
+
+                        <TextBlock Margin="5" Grid.Column="2" VerticalAlignment="Center">Смещение по X</TextBlock>
+                        <Slider ValueChanged="Slider_ValueChanged_X" Margin="5" Grid.Column="3" Value="0" Minimum="-45" Maximum="45" SelectionStart="0" VerticalAlignment="Center"></Slider>
+
+                        <TextBlock Margin="5" Grid.Column="4" VerticalAlignment="Center">Глубина</TextBlock>
+                        <Slider ValueChanged="Slider_ValueChanged_Z" Margin="5" Grid.Column="5" Value="1" Minimum="1" Maximum="2" SelectionStart="0" VerticalAlignment="Center"></Slider>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+            <Grid DockPanel.Dock="Bottom" Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0">Вращение</TextBlock>
+                <Slider ValueChanged="Slider_ValueChanged" Grid.Column="1" Value="0" Minimum="0" Maximum="360" SelectionStart="0" TickPlacement="BottomRight"/>
+            </Grid>
+            <Canvas x:Name="Canvas" SizeChanged="Canvas_SizeChanged"></Canvas>
+        </DockPanel>
+    </Grid>
+</Window>

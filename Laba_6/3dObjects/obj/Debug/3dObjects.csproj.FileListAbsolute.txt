@@ -1,0 +1,14 @@
+C:\Users\Ytm\source\repos\3dObjects\3dObjects\bin\Debug\3dObjects.exe.config
+C:\Users\Ytm\source\repos\3dObjects\3dObjects\bin\Debug\3dObjects.exe
+C:\Users\Ytm\source\repos\3dObjects\3dObjects\bin\Debug\3dObjects.pdb
+C:\Users\Ytm\source\repos\3dObjects\3dObjects\obj\Debug\3dObjects.csprojAssemblyReference.cache
+C:\Users\Ytm\source\repos\3dObjects\3dObjects\obj\Debug\MainWindow.g.cs
+C:\Users\Ytm\source\repos\3dObjects\3dObjects\obj\Debug\App.g.cs
+C:\Users\Ytm\source\repos\3dObjects\3dObjects\obj\Debug\3dObjects_MarkupCompile.cache
+C:\Users\Ytm\source\repos\3dObjects\3dObjects\obj\Debug\3dObjects_MarkupCompile.lref
+C:\Users\Ytm\source\repos\3dObjects\3dObjects\obj\Debug\MainWindow.baml
+C:\Users\Ytm\source\repos\3dObjects\3dObjects\obj\Debug\3dObjects.g.resources
+C:\Users\Ytm\source\repos\3dObjects\3dObjects\obj\Debug\_3dObjects.Properties.Resources.resources
+C:\Users\Ytm\source\repos\3dObjects\3dObjects\obj\Debug\3dObjects.csproj.GenerateResource.cache
+C:\Users\Ytm\source\repos\3dObjects\3dObjects\obj\Debug\3dObjects.exe
+C:\Users\Ytm\source\repos\3dObjects\3dObjects\obj\Debug\3dObjects.pdb
